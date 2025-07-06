@@ -3,6 +3,7 @@
   "type": "module",
   "packageManager": "pnpm@10.12.4",
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "scripts": {
@@ -18,7 +19,7 @@
     "@biomejs/biome": "2.0.6",
     "@effect/build-utils": "^0.8.6",
     "@effect/language-service": "^0.23.5",
-    "@effect/vitest": "latest",
+    "@effect/vitest": "^0.23.12",
     "@types/node": "^24.0.10",
     "effect": "^3.16.12",
     "glob": "^11.0.3",
@@ -31,14 +32,22 @@
     "vitest": "^3.2.4"
   },
   "pnpm": {
-    "overrides": {
-      "vitest": "^2.0.5"
-    },
-    "patchedDependencies": {}
+    "patchedDependencies": {},
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "msgpackr-extract"
+    ],
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
       "npx ultracite format"
     ]
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }

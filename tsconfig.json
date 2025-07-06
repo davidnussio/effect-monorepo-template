@@ -3,10 +3,13 @@
   "include": [],
   "references": [
     {
-      "path": "apps/*"
+      "path": "apps/cli"
     },
     {
-      "path": "packages/*"
+      "path": "apps/server"
+    },
+    {
+      "path": "packages/domain"
     }
   ],
   "compilerOptions": {

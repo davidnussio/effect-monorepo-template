@@ -23,16 +23,13 @@
     "coverage": "vitest --coverage"
   },
   "dependencies": {
-    "@effect/cli": "latest",
-    "@effect/platform": "latest",
-    "@effect/platform-node": "latest",
+    "@effect/cli": "^0.66.9",
+    "@effect/platform": "^0.87.9",
+    "@effect/platform-node": "^0.89.1",
     "@template/domain": "workspace:^",
     "effect": "latest"
   },
   "devDependencies": {
-    "@effect/cli": "latest",
-    "@effect/platform": "latest",
-    "@effect/platform-node": "latest",
     "@template/domain": "workspace:^",
     "effect": "latest"
   },
